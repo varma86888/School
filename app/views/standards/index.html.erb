@@ -1,0 +1,20 @@
+<h1>Standards</h1>
+<p><b>No of Standards: <%= @standards.length %></b></p>
+<table border = "1" class="table table-dark" >
+  <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>School Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @standards.each do |standard| %>
+    <tr>
+        <td><%= standard.id %></td>
+        <td><%= standard.name %></td>
+        <td><%= standard.school.name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table><br><br>

@@ -1,0 +1,20 @@
+<h1>Schools</h1>
+<p><b>No of Schools: <%= @schools.length %></b></p>
+<table border = "1" class="table table-dark" >
+  <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Established Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @schools.each do |school| %>
+    <tr>
+        <td><%= school.id %></td>
+        <td><%= school.name %></td>
+        <td><%= school.established %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table><br><br>

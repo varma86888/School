@@ -1,0 +1,27 @@
+<h1>Students</h1>
+
+<p><b>No of Students: <%= @students.length %></b></p>
+<table border = "1" class="table table-dark" >
+  <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>School Name</th>
+      <th>Branch Location</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @students.each do |student| %>
+    <tr>
+        <td><%= student.id %></td>
+        <td><%= student.name %></td>
+        <td><%= student.age %></td>
+        <td><%= student.gender %></td>
+        <td><%= student.school.name %></td>
+        <td><%= student.branch.location %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table><br><br>

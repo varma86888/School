@@ -1,0 +1,35 @@
+<h1>Students Information</h1>
+
+<div class="row">    
+    <div class= "col-sm-6" >
+    <label for="staticSchool" class="col-sm-1 col-form-label" >Schools:</label>
+        <%= select_tag "schools", options_from_collection_for_select(@schools, "id", "name"),
+            class: "form-control form-control-sm",:prompt => "select school" %>
+    </div>
+    <div class= "col-sm-6" id = "branches_id" >
+    <label for="staticBranch" class="col-sm-1 col-form-label">Branches:</label>
+        <%= select_tag "branches", raw("<option></option>"),
+            class: "form-control form-control-sm",:prompt => "select branch" %>&nbsp;&nbsp;
+    </div>    
+    <div class= "col-sm-6" id = "standards_id">
+    <label for="staticStandard" class="col-sm-1 col-form-label" >Standards:</label>
+        <%= select_tag "standards", raw("<option></option>"),
+            class: "form-control form-control-sm",:prompt => "select standard" %>
+    </div>
+    <div class= "col-sm-6" id = "teachers_id">
+    <label for="staticStudent" class="col-sm-1 col-form-label" >Teachers:</label>
+        <%= select_tag "teachers", raw("<option></option>"),
+            class: "form-control form-control-sm",:prompt => "select teacher" %>&nbsp;&nbsp;
+    </div>
+    <div class= "col-sm-6" id = "students_id">
+    <label for="staticStudent" class="col-sm-1 col-form-label" >Students:</label>
+        <%= select_tag "students", raw("<option></option>"),
+            class: "form-control form-control-sm",:prompt => "select student" %>
+    </div>
+    <div class= "col-sm-12" id = "student_info">
+        <h1>Student Info:</h1>
+        <p> Name:  <span class = "student_name"  ></span></p>
+        <p> Gender:<span class = "student_gender"></span></p>
+        <p> Age:   <span class = "student_age"   ></span></p>
+    </div>
+</div>
